@@ -4,11 +4,11 @@ import { NextFunction, Request, Response } from "express";
 import i18next from "i18next";
 import translationCy from "../locales/cy/translation.json";
 import translationEn from "../locales/en/translation.json";
-import { getLogger } from "./utils/logger";
+import { createLogger } from "@govuk-one-login/logger";
 
 export * from "./lib";
 
-const logger = getLogger();
+const logger = createLogger({ name: "@govuk-one-login/frontend-ui" });
 
 // Define types for Express and non-Express versions
 interface I18nData {

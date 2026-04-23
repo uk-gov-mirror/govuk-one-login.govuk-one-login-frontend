@@ -46,8 +46,8 @@ interface PlainResponse {
 
 const mockLogger = jest.fn();
 
-jest.mock("../utils/logger", () => ({
-  getLogger: () => ({
+jest.mock("@govuk-one-login/logger", () => ({
+  createLogger: () => ({
     warn: () => mockLogger(),
   }),
 }));

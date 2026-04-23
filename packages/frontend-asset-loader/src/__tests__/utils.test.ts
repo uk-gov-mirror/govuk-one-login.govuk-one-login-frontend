@@ -1,8 +1,8 @@
-import { getLogger } from "../utils/logger";
+import { getLogger } from "@govuk-one-login/logger";
 import { isValidHashName, getDuplicateHashedFileName } from "../utils/utils";
 import type { Mock } from "vitest";
 
-vi.mock("../utils/logger", () => ({
+vi.mock("@govuk-one-login/logger", () => ({
   getLogger: vi.fn(),
 }));
 
